@@ -49,5 +49,5 @@ int main() {
 	int arr[7] = { 1,2,3,5,5,5,7 };
 	cout << "First Occurance is :" << firstOcc(arr, 7, 5);
 	cout << "\nLast Occurance is :" << lastOcc(arr, 7, 5);
-
+	cout << "\nTotal Occurance is: " << lastOcc(arr, 7, 5) - firstOcc(arr, 7, 5) + 1;
 }
