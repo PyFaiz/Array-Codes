@@ -1,4 +1,10 @@
 public class basic_linked_list {
+    public static void displayr(Node a){
+        if(a == null) return;
+        System.out.print(a.data);
+        if(a.next != null) System.out.print(" -> ");
+        displayr(a.next);
+    }
     public static void display(Node a){
         Node temp = a;
         while(temp != null){
@@ -25,7 +31,7 @@ public class basic_linked_list {
         n2.next = n3    ;
         n3.next = n4;
 
-        display(n1);
+        displayr(n1);
         // Node temp = n1;
         // while(temp != null){
         //     System.out.println(temp.data);
