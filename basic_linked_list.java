@@ -3,7 +3,14 @@ public class basic_linked_list {
         if(a == null) return;
         System.out.print(a.data);
         if(a.next != null) System.out.print(" -> ");
+        else System.out.println();
         displayr(a.next);
+    }
+    public static void displayreverse(Node a){
+        if(a ==  null) return;
+        displayreverse(a.next);
+        System.out.print(a.data);
+        if(a.data != 2) System.out.print(" -> "); 
     }
     public static void display(Node a){
         Node temp = a;
@@ -32,6 +39,7 @@ public class basic_linked_list {
         n3.next = n4;
 
         displayr(n1);
+        displayreverse(n1);
         // Node temp = n1;
         // while(temp != null){
         //     System.out.println(temp.data);
