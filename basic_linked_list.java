@@ -16,9 +16,13 @@ public class basic_linked_list {
         n3.next = n4;
 
         Node temp = n1;
-        for(int i=0;i<4;i++){
+        while(temp != null){
             System.out.println(temp.data);
             temp = temp.next;
         }
+        // for(int i=0;i<4;i++){
+        //     System.out.println(temp.data);
+        //     temp = temp.next;
+        // }
     }
 }
