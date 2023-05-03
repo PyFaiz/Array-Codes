@@ -12,8 +12,13 @@ public class basic_linked_list {
         Node n3 = new Node(7);
         Node n4 = new Node(9);
         n1.next = n2;
-        n2.next = n3;
+        n2.next = n3    ;
         n3.next = n4;
-        System.out.println(n3.next.data);
+
+        Node temp = n1;
+        for(int i=0;i<4;i++){
+            System.out.println(temp.data);
+            temp = temp.next;
+        }
     }
 }
