@@ -68,6 +68,23 @@ public class linked_list_implementation {
                     size++;
                 }
             }
+            void delete(int idx){
+                if(idx == 0){
+                    head = head.next;
+                    size--;
+                }
+                else{
+                    Node temp = head;
+                    for(int i=0;i<idx-1;i++){
+                        temp = temp.next;
+                    }
+                    temp.next = temp.next.next;
+                    if(idx  ==  size -1){
+                        tail = temp;
+                    }
+                    size--;
+                }
+            }
     }
     public static class Node{
         int data;
@@ -77,9 +94,7 @@ public class linked_list_implementation {
         }
     } 
     
-    
-    
-    
+
     public static void main(String[] args){
         Linked_list ll = new Linked_list();
         ll.add(5);
@@ -92,5 +107,9 @@ public class linked_list_implementation {
         ll.display();
         System.out.println(ll.getElement(3));
         System.out.println(ll.size);
+        ll.delete(4);
+        ll.display();
+        System.out.println(ll.size);
+        System.out.println(ll.tail.data);
     }
 }
