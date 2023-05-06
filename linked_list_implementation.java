@@ -42,6 +42,10 @@ public class linked_list_implementation {
                 else if(idx == size){
                     add(data);
                 }
+                else if(idx > size || idx < 0){
+                    System.out.println("Wrong Index!!");
+                    return;
+                }
                 else{
                     Node temp = new Node(data);
                     Node t = head;
@@ -73,7 +77,7 @@ public class linked_list_implementation {
         ll.display();
         ll.insertatbegin(4);
         ll.display();
-        ll.insert(12, 2);
+        ll.insert(12, -2);
         ll.display();
         System.out.println(ll.size);
     }
