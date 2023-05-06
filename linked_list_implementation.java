@@ -35,6 +35,17 @@ public class linked_list_implementation {
                 }
                 size++;
             }
+            int getElement(int idx){
+                Node temp = head;
+                if(idx > size || idx < 0){
+                    System.out.println("Error!! Invaild Index");
+                    return -1;
+                }
+                for(int i=0;i<idx;i++){
+                    temp = temp.next;
+                }
+                return temp.data;
+            }
             void insert(int data,int idx){
                 if(idx == 0 ){
                     insertatbegin(data);
@@ -77,8 +88,9 @@ public class linked_list_implementation {
         ll.display();
         ll.insertatbegin(4);
         ll.display();
-        ll.insert(12, -2);
+        ll.insert(12, 2);
         ll.display();
+        System.out.println(ll.getElement(3));
         System.out.println(ll.size);
     }
 }
