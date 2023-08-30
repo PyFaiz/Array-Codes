@@ -9,7 +9,7 @@ public class basic_linked_list {
     public static void displayreverse(Node a){
         if(a ==  null) return;
         displayreverse(a.next);
-        System.out.print(a.data);
+        System.out.print(a.data);   
         if(a.data != 2) System.out.print(" -> "); 
     }
     public static void display(Node a){
