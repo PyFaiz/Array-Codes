@@ -28,6 +28,7 @@ public class shifty_problem_2_revisit {
     }
     public static int[] shifter(int[] array,int k,String shift){
         int n = array.length;
+        k = k%n;
         if(shift == "right")
         {  
                 reverse(array, n-k, n-1);
