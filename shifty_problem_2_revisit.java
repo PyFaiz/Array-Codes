@@ -30,9 +30,9 @@ public class shifty_problem_2_revisit {
         int n = array.length;
         if(shift == "right")
         {  
-            reverse(array, n-k, n-1);
-            reverse(array, 0, n-k-1);
-            reverse(array, 0, n-1);
+                reverse(array, n-k, n-1);
+                reverse(array, 0, n-k-1);
+                reverse(array, 0, n-1);
             return array;
         }
         else
