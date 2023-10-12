@@ -29,5 +29,7 @@ public class search_insert_position {
         }
         return current_smol;
     }
+
+    
 }
 

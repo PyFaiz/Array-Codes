@@ -8,14 +8,15 @@ public class lower_bound_expert {
         while(start<=end)
         {
             int mid = (start+end)/2;
-            if(arra[mid]>=x)
+            if(arra[mid]<=x)
             {       
                 current_smol = mid;
-                end = mid-1;
-            }
-            else if(arra[mid]<x)
-            {
                 start = mid+1;
+                
+            }
+            else if(arra[mid]>x)
+            {
+                end = mid-1;
             }
         }
         return current_smol;
