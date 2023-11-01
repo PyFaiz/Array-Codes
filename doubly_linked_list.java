@@ -34,6 +34,20 @@ public class doubly_linked_list {
         head = temp;
         return temp;
     }
+
+    public static void insertAtIndex(int data,Node head,int idx){
+        Node s = head;
+        for(int i=1;i<=idx-1;i++){
+            s = s.next;
+        }
+
+        Node r = s.next;
+        Node t = new Node(data);
+        s.next = t;
+        t.previous = s;
+        t.next = r;
+        r.previous = t;
+    }
     public static void main(String[] args) {
         Node a = new Node(3);
         Node b = new Node(4);
@@ -48,8 +62,9 @@ public class doubly_linked_list {
         d.previous  = c;
         d.next = null;
         insertattail(a, 90);
+        //display(a);
+        insertAtIndex(9, a, 2);
         display(a);
-
 
     }   
 }
