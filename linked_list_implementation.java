@@ -15,6 +15,13 @@ public class linked_list_implementation {
                     tail = temp;
                     size++;
             }
+            void displayreverse(){
+                
+                if(head == null) return;
+                System.out.println(head.data);
+                displayreverse();
+
+            }
             void display(){
                 Node temp = head;
                 while(temp!=null){
@@ -100,16 +107,6 @@ public class linked_list_implementation {
         ll.add(5);
         ll.add(6);
         ll.add(20);
-        ll.display();
-        ll.insertatbegin(4);
-        ll.display();
-        ll.insert(12, 2);
-        ll.display();
-        System.out.println(ll.getElement(3));
-        System.out.println(ll.size);
-        ll.delete(4);
-        ll.display();
-        System.out.println(ll.size);
-        System.out.println(ll.tail.data);
+        ll.displayreverse();
     }
 }
